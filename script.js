@@ -12,3 +12,11 @@ function getComputerChoice(){
     return "scissors";
   }
 }
+
+function getHumanChoice(){
+  let humanChoice;
+  humanChoice = prompt("Choose an option:\nrock\npaper\nscissors");
+  humanChoice = humanChoice.toLowerCase(); //convert the string to lowercase
+  humanChoice = humanChoice.trim(); //remove whitespaces before and after
+  return humanChoice;
+}
