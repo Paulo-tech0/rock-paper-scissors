@@ -1,4 +1,7 @@
-//console.log("It's working!");
+let humanScore, computerScore;
+humanScore = 0;
+computerScore = 0;
+
 function getComputerChoice(){
   let randomNumber;
   randomNumber = Math.floor(Math.random()*3);
