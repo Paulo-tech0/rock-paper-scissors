@@ -58,6 +58,15 @@ function playGame(){
     let computerSelection = getComputerChoice();
     playRound(humanSelection, computerSelection);
   }
+  if (humanScore>computerScore){
+    console.log(`Player wins the game! ${humanScore}(Player)X${computerScore}(Computer)`);
+  }
+  else if (computerScore>humanScore){
+    console.log(`Computer wins the game! ${humanScore}(Player)X${computerScore}(Computer)`);
+  }
+  else {
+    console.log(`The game was a tie! ${humanScore}(Player)X${computerScore}(Computer)`);
+  }
 }
 
 playGame();
