@@ -1,7 +1,3 @@
-let humanScore, computerScore;
-humanScore = 0;
-computerScore = 0;
-
 function getComputerChoice(){
   let randomNumber;
   randomNumber = Math.floor(Math.random()*3);
@@ -24,7 +20,11 @@ function getHumanChoice(){
   return humanChoice;
 }
 
-function playRound(humanChoice, computerChoice){
+function playGame(){
+  let humanScore, computerScore;
+  humanScore = 0;
+  computerScore = 0;
+  function playRound(humanChoice, computerChoice){
   if (humanChoice==="rock"&&computerChoice==="scissors"){
     console.log("Player wins! Rock beats scissors.");
     humanScore += 1;
@@ -53,8 +53,11 @@ function playRound(humanChoice, computerChoice){
     console.log("It is a tie! Player and computer choose the same option.");
   }
 }
+  for (i=1;i<=5;i++){
+    let humanSelection = getHumanChoice();
+    let computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+  }
+}
 
-let humanSelection = getHumanChoice();
-let computerSelection = getComputerChoice();
-
-playRound(humanSelection, computerSelection);
+playGame();
