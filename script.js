@@ -14,17 +14,19 @@ function getComputerChoice(){
 
 function getHumanChoice(){
   let humanChoice;
-  humanChoice = prompt("Choose an option:\nrock\npaper\nscissors");
-  humanChoice = humanChoice.toLowerCase(); //convert the string to lowercase
-  humanChoice = humanChoice.trim(); //remove whitespaces before and after
+  const ROCK = document.querySelector(".rock");
+  const PAPER = document.querySelector(".paper");
+  const SCISSORS = document.querySelector(".scissors");
+  ROCK.addEventListener("click", playRound);
+  PAPER.addEventListener("click", playRound);
+  SCISSORS.addEventListener("click", playRound);
+  //humanChoice = prompt("Choose an option:\nrock\npaper\nscissors");
+  //humanChoice = humanChoice.toLowerCase(); //convert the string to lowercase
+  //humanChoice = humanChoice.trim(); //remove whitespaces before and after
   return humanChoice;
 }
 
-function playGame(){
-  let humanScore, computerScore;
-  humanScore = 0;
-  computerScore = 0;
-  function playRound(humanChoice, computerChoice){
+function playRound(humanChoice, computerChoice){
   if (humanChoice==="rock"&&computerChoice==="scissors"){
     console.log("Player wins! Rock beats scissors.");
     humanScore += 1;
@@ -53,6 +55,12 @@ function playGame(){
     console.log("It is a tie! Player and computer choose the same option.");
   }
 }
+
+function playGame(){
+  let humanScore, computerScore;
+  humanScore = 0;
+  computerScore = 0;
+  
   for (i=1;i<=1;i++){
     let humanSelection = getHumanChoice();
     let computerSelection = getComputerChoice();
