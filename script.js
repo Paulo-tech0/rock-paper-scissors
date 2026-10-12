@@ -53,7 +53,7 @@ function playGame(){
     console.log("It is a tie! Player and computer choose the same option.");
   }
 }
-  for (i=1;i<=5;i++){
+  for (i=1;i<=1;i++){
     let humanSelection = getHumanChoice();
     let computerSelection = getComputerChoice();
     playRound(humanSelection, computerSelection);
