@@ -3,8 +3,8 @@ const PAPER = document.querySelector(".paper");
 const SCISSORS = document.querySelector(".scissors");
 const RESULTS = document.querySelector(".results");
 const SCORE = document.querySelector(".score");
-let humanScore = 0;
-let computerScore = 0;
+let humanScore = localStorage.getItem("humanScore") || 0;
+let computerScore = localStorage.getItem("computerScore") || 0;
 ROCK.addEventListener("click", playRound);
 PAPER.addEventListener("click", playRound);
 SCISSORS.addEventListener("click", playRound);
@@ -29,31 +29,37 @@ function playRound(event){
     if (humanChoice==="rock"&&computerChoice==="scissors"){
       RESULTS.textContent = "Player wins! Rock beats scissors.";
       humanScore += 1;
+      localStorage.setItem("humanScore",humanScore);
       SCORE.textContent = `${humanScore}(Player)X${computerScore}(Computer)`;
       }
     else if (humanChoice==="paper"&&computerChoice=="rock"){
       RESULTS.textContent = "Player wins! Paper beats rock.";
       humanScore += 1;
+      localStorage.setItem("humanScore",humanScore);
       SCORE.textContent = `${humanScore}(Player)X${computerScore}(Computer)`;
       }
     else if (humanChoice==="scissors"&&computerChoice==="paper"){
       RESULTS.textContent = "Player wins! Scissors beats paper.";
       humanScore += 1;
+      localStorage.setItem("humanScore",humanScore);
       SCORE.textContent = `${humanScore}(Player)X${computerScore}(Computer)`;
       }
     else if (computerChoice==="rock"&&humanChoice==="scissors"){
       RESULTS.textContent = "Computer wins! Rock beats scissors.";
       computerScore += 1;
+      localStorage.setItem("computerScore",computerScore);
       SCORE.textContent = `${humanScore}(Player)X${computerScore}(Computer)`;
       }
     else if (computerChoice==="paper"&&humanChoice=="rock"){
       RESULTS.textContent = "Computer wins! Paper beats rock.";
       computerScore += 1;
+      localStorage.setItem("computerScore",computerScore);
       SCORE.textContent = `${humanScore}(Player)X${computerScore}(Computer)`;
       }
     else if (computerChoice==="scissors"&&humanChoice==="paper"){
       RESULTS.textContent = "Computer wins! Scissors beats paper.";
       computerScore += 1;
+      localStorage.setItem("computerScore",computerScore);
       SCORE.textContent = `${humanScore}(Player)X${computerScore}(Computer)`;
       }
     else {
