@@ -1,7 +1,8 @@
 const ROCK = document.querySelector(".rock");
 const PAPER = document.querySelector(".paper");
 const SCISSORS = document.querySelector(".scissors");
-const RESULTS = document.querySelector(".results")
+const RESULTS = document.querySelector(".results");
+const SCORE = document.querySelector(".score");
 ROCK.addEventListener("click", playRound);
 PAPER.addEventListener("click", playRound);
 SCISSORS.addEventListener("click", playRound);
