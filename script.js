@@ -23,6 +23,7 @@ function playRound(event){
     let computerChoice = getComputerChoice();
     let humanChoice = event.target.getAttribute("class");
     let humanScore = 0;
+    let computerScore = 0;
     if (humanChoice==="rock"&&computerChoice==="scissors"){
       console.log("Player wins! Rock beats scissors.");
       humanScore += 1;
@@ -52,7 +53,7 @@ function playRound(event){
       }
     }
 
-function playGame(){
+/*function playGame(){
   let humanScore, computerScore;
   humanScore = 0;
   computerScore = 0;
@@ -73,4 +74,4 @@ function playGame(){
   }
 }
 
-playGame();
+playGame();*/
