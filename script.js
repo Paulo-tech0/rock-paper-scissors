@@ -19,10 +19,10 @@ function getComputerChoice(){
   }
 }
 
-function playRound(humanChoice, computerChoice){
-  return function (event){
-    humanChoice = event.target.getAttribute("class");
-    computerChoice = getComputerChoice();
+function playRound(event){
+    let computerChoice = getComputerChoice();
+    let humanChoice = event.target.getAttribute("class");
+    let humanScore = 0;
     if (humanChoice==="rock"&&computerChoice==="scissors"){
       console.log("Player wins! Rock beats scissors.");
       humanScore += 1;
@@ -51,7 +51,6 @@ function playRound(humanChoice, computerChoice){
       console.log("It is a tie! Player and computer choose the same option.");
       }
     }
-}
 
 function playGame(){
   let humanScore, computerScore;
