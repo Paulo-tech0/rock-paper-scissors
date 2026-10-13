@@ -1,6 +1,7 @@
 const ROCK = document.querySelector(".rock");
 const PAPER = document.querySelector(".paper");
 const SCISSORS = document.querySelector(".scissors");
+const RESULTS = document.querySelector(".results")
 ROCK.addEventListener("click", playRound);
 PAPER.addEventListener("click", playRound);
 SCISSORS.addEventListener("click", playRound);
@@ -25,31 +26,31 @@ function playRound(event){
     let humanScore = 0;
     let computerScore = 0;
     if (humanChoice==="rock"&&computerChoice==="scissors"){
-      console.log("Player wins! Rock beats scissors.");
+      RESULTS.textContent = "Player wins! Rock beats scissors.";
       humanScore += 1;
       }
     else if (humanChoice==="paper"&&computerChoice=="rock"){
-      console.log("Player wins! Paper beats rock.");
+      RESULTS.textContent = "Player wins! Paper beats rock.";
       humanScore += 1;
       }
     else if (humanChoice==="scissors"&&computerChoice==="paper"){
-      console.log("Player wins! Scissors beats paper.");
+      RESULTS.textContent = "Player wins! Scissors beats paper.";
       humanScore += 1;
       }
     else if (computerChoice==="rock"&&humanChoice==="scissors"){
-      console.log("Computer wins! Rock beats scissors.");
+      RESULTS.textContent = "Computer wins! Rock beats scissors.";
       computerScore += 1;
       }
     else if (computerChoice==="paper"&&humanChoice=="rock"){
-      console.log("Computer wins! Paper beats rock.");
+      RESULTS.textContent = "Computer wins! Paper beats rock.";
       computerScore += 1;
       }
     else if (computerChoice==="scissors"&&humanChoice==="paper"){
-      console.log("Computer wins! Scissors beats paper.");
+      RESULTS.textContent = "Computer wins! Scissors beats paper.";
       computerScore += 1;
       }
     else {
-      console.log("It is a tie! Player and computer choose the same option.");
+      RESULTS.textContent = "It is a tie! Player and computer choose the same option.";
       }
     }
 
